@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=1]
+
+[ext_resource path="res://World.gd" type="Script" id=1]
+[ext_resource path="res://left_pallete.png" type="Texture" id=2]
+[ext_resource path="res://blueMovement.gd" type="Script" id=3]
+[ext_resource path="res://right_pallete.png" type="Texture" id=4]
+[ext_resource path="res://purpMovement.gd" type="Script" id=5]
+[ext_resource path="res://separator.png" type="Texture" id=6]
+[ext_resource path="res://ball.png" type="Texture" id=7]
+[ext_resource path="res://ballMovement.gd" type="Script" id=8]
+
+[node name="World" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="playerBlue" type="Sprite" parent="."]
+
+transform/pos = Vector2( 50, 200 )
+texture = ExtResource( 2 )
+script/script = ExtResource( 3 )
+
+[node name="playerPurp" type="Sprite" parent="."]
+
+transform/pos = Vector2( 590, 200 )
+texture = ExtResource( 4 )
+script/script = ExtResource( 5 )
+
+[node name="seperator" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 200 )
+texture = ExtResource( 6 )
+
+[node name="ball" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 250 )
+texture = ExtResource( 7 )
+script/script = ExtResource( 8 )
+
+
